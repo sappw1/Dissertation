@@ -172,3 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Ignore everything inside the Data folder
+Data/*
+
+# But keep the folder itself (so the structure exists)
+!Data/.gitkeep
