@@ -1,0 +1,9 @@
+# Handle Word documents as binary files
+*.docx binary
+*.doc binary
+
+# Optional: Treat PDFs, images, and other binaries similarly
+*.pdf binary
+*.png binary
+*.jpg binary
+*.xlsx binary
