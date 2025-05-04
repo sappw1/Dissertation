@@ -1,0 +1,32 @@
+Weekly Progress Summary – Dissertation Work (Semi-Supervised Fraud Detection in PPP Loans)
+This week’s work focused on preparing the core analytical foundation for Chapter 4. Key accomplishments include:
+
+Manual Tagging of Known Fraud Cases:
+
+Completed a full manual review and labeling of relevant PRAC and DOJ press releases.
+
+Matched fraudulent cases to PPP loan applications to generate the labeled subset used for supervised learning and evaluation.
+
+Loan Data Cleaning and Preprocessing:
+
+Cleaned and standardized the SBA PPP loan dataset (~960K records).
+
+Addressed missing values, standardized categorical and numeric features, and ensured compatibility with clustering and classification algorithms.
+
+Applied hashing to PII fields (e.g., BorrowerName, Address, Lender) to maintain confidentiality while preserving uniqueness.
+
+Exploratory Data Analysis (EDA):
+
+Conducted detailed exploration of key features (e.g., loan amount, forgiveness ratio, jobs reported).
+
+Created visualizations including histograms, Q-Q plots, binned bar charts, and a correlation heatmap to uncover patterns and outliers.
+
+Developed APA-style publication-ready figures and a summary statistics table comparing fraudulent vs. non-fraudulent loans.
+
+Drafting of Chapter 4:
+
+Drafted the initial Data Cleaning and Preprocessing section of Chapter 4 based on implemented steps and rationale.
+
+Finalized methodology language for imputation strategy, standardization, encoding, and feature engineering.
+
+All preprocessing scripts and visualizations have been versioned and stored in the research repository, along with an APA-formatted table summarizing grouped statistics by fraud label.
