@@ -1,0 +1,30 @@
+\documentclass[man]{apa7}
+\usepackage{booktabs}     % APA-style table rules
+\usepackage{caption}      % For table notes
+\usepackage{csquotes}     % For proper quotation formatting
+\usepackage[american]{babel}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Chapter 4: Data Preprocessing and Exploration}
+\shorttitle{Data Preparation}
+\author{Your Name}
+\affiliation{Your University}
+
+\begin{document}
+
+\maketitle
+
+\section{Descriptive Statistics}
+
+Table~\ref{tab:summary} presents descriptive statistics comparing fraudulent and non-fraudulent PPP loans. Key financial indicators, employee counts, and forgiveness patterns are summarized for both classes.
+
+\begin{table}[ht]
+\centering
+\input{summary_table.tex}
+\caption{Summary Statistics by Fraud Label}
+\caption*{\small Note. This table presents the mean, standard deviation, median, minimum, and maximum values for loan amount, number of jobs reported, and forgiveness ratio. Non-fraudulent and fraudulent loans are compared to highlight observed differences.}
+\label{tab:summary}
+\end{table}
+
+\end{document}
