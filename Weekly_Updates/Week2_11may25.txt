@@ -1,0 +1,35 @@
+Weekly Progress Summary – Dissertation Work (Semi-Supervised Fraud Detection in PPP Loans)
+
+This week focused on dimensionality reduction through Principal Component Analysis (PCA) as a foundational step in the clustering methodology detailed in Chapter 4. Key accomplishments and milestones include:
+
+1. Dimensionality Reduction via PCA
+Applied PCA on both the full preprocessed feature set and a key subset of features, handling missing values conservatively to maintain interpretive integrity.
+
+Explored multiple configurations:
+
+Variance-based PCA retaining 95% of total variance, which reduced both feature sets to a single component.
+
+Fixed-component PCA with 2 and 3 components, enabling visual inspection of clustering potential and feature interactions.
+
+Created visual outputs aligned with APA standards, including:
+
+2D scatterplots by fraud label using a muted, scientific color palette.
+
+Side-by-side bar plots for component loadings to identify key feature contributions.
+
+2D projections from 3D PCA results (PC1 vs PC2, PC2 vs PC3, PC1 vs PC3) for both feature sets.
+
+2. Documentation and Writing Progress
+Drafted the Principal Component Analysis subsection under the Clustering Methodology section of Chapter 4, providing technical explanation, methodological rationale, and visual interpretations.
+
+Structured the narrative to align with the CRISP-DM modeling framework and connect directly with the research questions.
+
+3. Visualization and Presentation Improvements
+Standardized all figure styles using the custom apa.mplstyle stylesheet.
+
+Tuned visual clarity through appropriate color selection, axis scaling, and consistent formatting across plots.
+
+4. Technical Environment Updates
+Troubleshot path and kernel issues within the working Jupyter environment.
+
+Verified proper functioning of APA-compliant figure generation workflows across both local and virtual environments.
