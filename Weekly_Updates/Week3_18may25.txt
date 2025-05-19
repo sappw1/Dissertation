@@ -1,0 +1,90 @@
+Weekly Progress Summary – Dissertation Work
+(Semi-Supervised Fraud Detection in PPP Loans)
+Week of May 13–17, 2025
+
+This week’s efforts focused on completing the unsupervised learning phase, finalizing the dimensionality reduction and clustering methodology, and preparing the data pipeline for supervised experimentation. Major accomplishments include:
+
+1. Completion of Clustering Phase
+All clustering methods specified in the approved Chapter 3 design were executed and evaluated, including:
+
+K-Means Clustering
+
+Ran on PCA-reduced Full and Key feature sets (2 and 3 components).
+
+Optimal k=2 determined via silhouette score and elbow plots.
+
+Outputs included labels, metrics (silhouette score, DBI), and visual overlays with fraud markers.
+
+Hierarchical Clustering
+
+Applied agglomerative clustering using single linkage.
+
+Best performance observed on Full 2-component PCA (silhouette = 0.92).
+
+Dendrograms and label outputs generated for later integration.
+
+DBSCAN Clustering
+
+Executed across PCA-reduced Full and Key datasets using multiple ε values.
+
+Best configuration identified: Key 3C with ε = 1.00.
+
+Noise points extracted and saved for semi-supervised modeling.
+
+Produced full metrics table (LaTeX and CSV) and comparative plots across all ε and configurations.
+
+t-SNE for Visualization
+
+Applied using cuML accelerated GPU environment.
+
+Generated 2D embeddings for both Full and Key PCA-reduced datasets.
+
+Created overlay plots showing fraud distributions.
+
+Composite figure drafted for inclusion in Chapter 4 visualization set.
+
+2. Feature Integration Strategy Finalized
+Implemented the “cluster-as-feature” integration strategy for supervised learning.
+
+Cluster labels (KMeans and Hierarchical) converted to ordinal features.
+
+DBSCAN noise flags stored as binary columns.
+
+Standardized naming conventions (e.g., kmeans_full2c_ordinal, dbscan_key3c_e100_noise) to support flexible dataset assembly.
+
+3. Experiment Configuration Framework Built
+Defined a modular JSON-based cluster configuration structure (model_config.json).
+
+8 total cluster feature sets constructed:
+
+Baseline (no clusters), single model configs, and all pairwise + triple combinations.
+
+Designed configs.py for supervised model parameters:
+
+7 classifiers (logistic regression, SVM, naive Bayes, neural nets, decision trees, random forest, XGBoost).
+
+Flags for GPU usage and SMOTE inclusion.
+
+4. Design Compliance and Dataset Planning
+Confirmed alignment with Chapter 3 research design (Option C integration).
+
+Identified best-performing clustering outputs for each method:
+
+KMeans (Full 2C), Hierarchical (Full 2C), DBSCAN (Key 3C, ε = 1.00).
+
+Developed plan for combined labeled dataset, supporting all supervised configurations with dynamic inclusion of cluster features.
+
+5. Writing and Documentation Progress
+Drafted clustering methodology and results sections for DBSCAN and t-SNE.
+
+Composed detailed rationale for cluster-feature inclusion strategy in the modeling pipeline.
+
+Generated APA-style figures and LaTeX tables for DBSCAN metrics and t-SNE overlays.
+
+6. Technical and Code Infrastructure
+Implemented GPU-accelerated pipelines using cuML, cudf, and cupy.
+
+Verified full pipeline in Google Colab using Drive-mounted data.
+
+Consolidated all PCA, clustering, and t-SNE outputs into consistent storage and access paths.
+
