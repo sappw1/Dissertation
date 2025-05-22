@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Baseline",
+    "cluster_features": []
+  },
+  {
+    "name": "KMeans_Only",
+    "cluster_features": ["kmeans_full2c_ordinal"]
+  },
+  {
+    "name": "Hierarchical_Only",
+    "cluster_features": ["hier_full2c_ordinal"]
+  },
+  {
+    "name": "DBSCAN_Only",
+    "cluster_features": ["dbscan_key3c_e100_noise"]
+  },
+  {
+    "name": "KMeans+Hierarchical",
+    "cluster_features": ["kmeans_full2c_ordinal", "hier_full2c_ordinal"]
+  },
+  {
+    "name": "KMeans+DBSCAN",
+    "cluster_features": ["kmeans_full2c_ordinal", "dbscan_key3c_e100_noise"]
+  },
+  {
+    "name": "Hierarchical+DBSCAN",
+    "cluster_features": ["hier_full2c_ordinal", "dbscan_key3c_e100_noise"]
+  },
+  {
+    "name": "All_Clusters",
+    "cluster_features": [
+      "kmeans_full2c_ordinal",
+      "hier_full2c_ordinal",
+      "dbscan_key3c_e100_noise"
+    ]
+  }
+]

@@ -178,3 +178,9 @@ Data/*
 
 # But keep the folder itself (so the structure exists)
 !Data/.gitkeep
+
+# Ignore everything inside the Results folder
+Results/*
+
+# But keep the folder itself (so the structure exists)
+!Results/.gitkeep

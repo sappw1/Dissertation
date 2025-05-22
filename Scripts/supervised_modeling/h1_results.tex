@@ -1,0 +1,60 @@
+\begin{tabular}{lllrr}
+\toprule
+model & metric & cluster_condition & mean_diff & p_value \\
+\midrule
+neural_net & roc_auc & KMeans_Only & -0.018169 & 0.437500 \\
+neural_net & roc_auc & Hierarchical_Only & -0.001813 & 1.000000 \\
+neural_net & roc_auc & DBSCAN_Only & 0.024529 & 0.312500 \\
+neural_net & roc_auc & KMeans+Hierarchical & -0.058333 & 0.125000 \\
+neural_net & roc_auc & KMeans+DBSCAN & -0.007826 & 1.000000 \\
+neural_net & roc_auc & Hierarchical+DBSCAN & 0.010654 & 0.625000 \\
+neural_net & roc_auc & All_Clusters & 0.001511 & 0.812500 \\
+svm & roc_auc & DBSCAN_Only & -0.002218 & 1.000000 \\
+neural_net & accuracy & KMeans_Only & -0.051878 & 0.812500 \\
+neural_net & accuracy & Hierarchical_Only & 0.016357 & 0.812500 \\
+neural_net & accuracy & DBSCAN_Only & 0.102339 & 0.312500 \\
+neural_net & accuracy & KMeans+Hierarchical & -0.189930 & 0.062500 \\
+neural_net & accuracy & KMeans+DBSCAN & -0.031196 & 1.000000 \\
+neural_net & accuracy & Hierarchical+DBSCAN & 0.023522 & 0.625000 \\
+neural_net & accuracy & All_Clusters & 0.025224 & 1.000000 \\
+svm & accuracy & DBSCAN_Only & 0.000007 & 1.000000 \\
+neural_net & precision & KMeans_Only & 0.000939 & 0.437500 \\
+neural_net & precision & Hierarchical_Only & -0.000284 & 0.812500 \\
+neural_net & precision & DBSCAN_Only & 0.001655 & 0.312500 \\
+neural_net & precision & KMeans+Hierarchical & -0.000938 & 0.062500 \\
+neural_net & precision & KMeans+DBSCAN & 0.001308 & 0.437500 \\
+neural_net & precision & Hierarchical+DBSCAN & 0.000141 & 0.625000 \\
+neural_net & precision & All_Clusters & 0.001319 & 0.625000 \\
+svm & precision & DBSCAN_Only & -0.000003 & 1.000000 \\
+naive_bayes & precision & KMeans_Only & 0.000000 & 1.000000 \\
+naive_bayes & precision & Hierarchical_Only & -0.000000 & 0.500000 \\
+naive_bayes & precision & DBSCAN_Only & -0.000000 & 0.625000 \\
+naive_bayes & precision & KMeans+Hierarchical & -0.000000 & 0.625000 \\
+naive_bayes & precision & KMeans+DBSCAN & -0.000000 & 0.125000 \\
+naive_bayes & precision & Hierarchical+DBSCAN & 0.000000 & 0.500000 \\
+naive_bayes & precision & All_Clusters & 0.000000 & 0.500000 \\
+neural_net & recall & KMeans_Only & 0.015556 & 0.875000 \\
+neural_net & recall & Hierarchical_Only & -0.020000 & 0.625000 \\
+neural_net & recall & DBSCAN_Only & -0.053333 & 0.312500 \\
+neural_net & recall & KMeans+Hierarchical & 0.073333 & 0.062500 \\
+neural_net & recall & KMeans+DBSCAN & 0.015556 & 1.000000 \\
+neural_net & recall & Hierarchical+DBSCAN & -0.002222 & 0.875000 \\
+neural_net & recall & All_Clusters & -0.022222 & 1.000000 \\
+svm & recall & DBSCAN_Only & -0.004444 & 1.000000 \\
+neural_net & f1 & KMeans_Only & 0.001838 & 0.437500 \\
+neural_net & f1 & Hierarchical_Only & -0.000567 & 0.812500 \\
+neural_net & f1 & DBSCAN_Only & 0.003277 & 0.312500 \\
+neural_net & f1 & KMeans+Hierarchical & -0.001860 & 0.062500 \\
+neural_net & f1 & KMeans+DBSCAN & 0.002570 & 0.437500 \\
+neural_net & f1 & Hierarchical+DBSCAN & 0.000283 & 0.625000 \\
+neural_net & f1 & All_Clusters & 0.002607 & 0.625000 \\
+svm & f1 & DBSCAN_Only & -0.000006 & 1.000000 \\
+naive_bayes & f1 & KMeans_Only & 0.000000 & 1.000000 \\
+naive_bayes & f1 & Hierarchical_Only & -0.000000 & 0.500000 \\
+naive_bayes & f1 & DBSCAN_Only & -0.000000 & 0.625000 \\
+naive_bayes & f1 & KMeans+Hierarchical & -0.000000 & 0.625000 \\
+naive_bayes & f1 & KMeans+DBSCAN & -0.000000 & 0.125000 \\
+naive_bayes & f1 & Hierarchical+DBSCAN & 0.000000 & 0.500000 \\
+naive_bayes & f1 & All_Clusters & 0.000000 & 0.500000 \\
+\bottomrule
+\end{tabular}
