@@ -8,7 +8,6 @@ def load_experiment_configs(mode="gpu"):  # mode = "gpu" or "cpu"
         {"model_name": "svm", "apply_smote": True, "use_gpu": True},
         {"model_name": "naive_bayes", "apply_smote": True, "use_gpu": True},
         {"model_name": "neural_net", "apply_smote": True, "use_gpu": True},
-        {"model_name": "decision_tree", "apply_smote": True, "use_gpu": True},
         {"model_name": "rf", "apply_smote": True, "use_gpu": True},
         {"model_name": "xgboost", "apply_smote": True, "use_gpu": True}
     ]

@@ -1,8 +1,8 @@
 from configs import load_experiment_configs
 from models import get_model
 from utils import load_data, prepare_data, save_results
-from cuml.metrics import roc_auc_score
-from sklearn.metrics import classification_report 
+from cuml.metrics import roc_auc_score as curoc
+from sklearn.metrics import classification_report, roc_auc_score 
 import numpy as np
 import pandas as pd
 import json
@@ -19,7 +19,7 @@ if len(sys.argv) > 1:
 
 QUICK_TEST = False  # Flip to False for full experiment
 
-remaining_models = {"xgboost"}
+remaining_models = {"svm", "rf","xgboost","naive_bayes","neural_net","logreg"}
 
 SEEDS = [42, 52, 62, 72, 82]  # Repeat experiments for statistical analysis
 
@@ -67,18 +67,32 @@ def run_experiment(config, seed, log_file):
         y_pred_bin = y_pred
     print(f"Made it this far")
     # Metrics
-    report = classification_report(cp.asnumpy(y_test), cp.asnumpy(y_pred_bin), output_dict=True)
+    if config["use_gpu"]:
+        y_test_np = cp.asnumpy(y_test)
+        y_pred_bin_np = cp.asnumpy(y_pred_bin)
+        y_proba_np = cp.asnumpy(y_proba)
+    else:
+        y_test_np = y_test
+        y_pred_bin_np = y_pred_bin
+        y_proba_np = y_proba
+
+    report = classification_report(y_test_np, y_pred_bin_np, output_dict=True)
+
     print(f"Made it this far2")
-    auc = roc_auc_score(y_test, y_proba)
+    if config["use_gpu"]:
+        auc = curoc(y_test, y_proba)
+    else:
+        auc = roc_auc_score(y_test, y_proba)
     print(f"Made it this far3")
     model_id = f"{config['model_name']}_{config['cluster_condition']}_seed{seed}"
 
         # Save per-sample predictions
     preds_df = pd.DataFrame({
-        "y_true": cp.asnumpy(y_test),
-        "y_pred": cp.asnumpy(y_pred_bin),
-        "y_proba": cp.asnumpy(y_proba)
+        "y_true": y_test_np,
+        "y_pred": y_pred_bin_np,
+        "y_proba": y_proba_np
     })
+
     print(f"Home stretch")
     preds_df.to_csv(os.path.join(results_dir, f"{model_id}_predictions.csv"), index=False)
 

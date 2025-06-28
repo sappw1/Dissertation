@@ -1,0 +1,58 @@
+[
+  {
+    "algorithm": "kmeans",
+    "feature_space": "no_pca",
+    "label_prefix": "kmeans_full",
+    "sweep": {
+      "param": "n_clusters",
+      "values": [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    }
+  },
+  {
+    "algorithm": "kmeans",
+    "feature_space": "pca",
+    "label_prefix": "kmeans_pca",
+    "sweep": {
+      "param": "n_clusters",
+      "values": [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    }
+  },
+  {
+    "algorithm": "hierarchical",
+    "feature_space": "no_pca",
+    "label_prefix": "hier_full",
+    "sweep": {
+      "param": "n_clusters",
+      "values": [2, 3, 4, 5, 6]
+    }
+  },
+    {
+    "algorithm": "hierarchical",
+    "feature_space": "pca",
+    "label_prefix": "hier_full",
+    "sweep": {
+      "param": "n_clusters",
+      "values": [2, 3, 4, 5, 6]
+    }
+  },
+  {
+    "algorithm": "dbscan",
+    "feature_space": "pca",
+    "label_prefix": "dbscan_pca",
+    "sweep": {
+      "param": "eps",
+      "values": [0.3, 0.5, 0.7, 1.0, 1.3],
+      "min_samples": [3, 5, 7, 10, 15]
+    }
+  },
+  {
+    "algorithm": "dbscan",
+    "feature_space": "no_pca",
+    "label_prefix": "dbscan_full",
+    "sweep": {
+      "param": "eps",
+      "values": [0.3, 0.5, 0.7, 1.0, 1.3],
+      "min_samples": [3, 5, 7, 10, 15]
+    }
+  }
+]

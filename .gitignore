@@ -184,3 +184,9 @@ Results/*
 
 # But keep the folder itself (so the structure exists)
 !Results/.gitkeep
+
+# Ignore everything inside the Figures folder
+Figures/*
+
+# But keep the folder itself (so the structure exists)
+!Figures/.gitkeep
