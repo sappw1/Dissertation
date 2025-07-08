@@ -123,7 +123,7 @@ def run_experiment(config, seed, log_file):
 # Run all experiments and save outputs
 if __name__ == "__main__":
     all_results = []
-    results_dir = f"/content/drive/MyDrive/NCU/Dissertation/Results/Supervised/{mode.upper()}"
+    results_dir = f"/content/drive/MyDrive/NCU/Dissertation/Results/Supervised/PCA_run/all_features/{mode.upper()}"
     os.makedirs(results_dir, exist_ok=True)
     log_path = os.path.join(results_dir, f"run_log{mode}.txt")
 

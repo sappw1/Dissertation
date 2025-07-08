@@ -6,8 +6,8 @@ import scipy.stats as stats
 import os
 
 # === CONFIG ===
-csv_path = "/content/drive/MyDrive/NCU/Dissertation/Results/Supervised/analysis/supervised_summary_by_seed.csv"
-RESULTS_DIR = "/content/drive/MyDrive/NCU/Dissertation/Results/Supervised"
+csv_path = "/content/drive/MyDrive/NCU/Dissertation/Results/Supervised/PCA_run/analysis/supervised_summary_by_seed.csv"
+RESULTS_DIR = "/content/drive/MyDrive/NCU/Dissertation/Results/Supervised/PCA_run"
 OUTPUT_DIR = os.path.join(RESULTS_DIR, "analysis")
 # === LOAD DATA ===
 df = pd.read_csv(csv_path)

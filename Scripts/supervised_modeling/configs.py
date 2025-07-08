@@ -18,7 +18,7 @@ def load_experiment_configs(mode="gpu"):  # mode = "gpu" or "cpu"
     elif mode == "cpu":
         base_models = [m for m in base_models if not m["use_gpu"]]
 
-    config_path = "/content/drive/MyDrive/NCU/Dissertation/Scripts/supervised_modeling/model_config.json"
+    config_path = "/content/drive/MyDrive/NCU/Dissertation/Scripts/supervised_modeling/model_config_all_features.json"
     with open(config_path, "r") as f:
         cluster_configs = json.load(f)
 
