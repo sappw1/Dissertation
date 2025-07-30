@@ -1,0 +1,5 @@
+anootatiohs highlighting callouts for tables / visuals
+
+
+
+pca - we are capturing the vector that accounts for 95% fo the variance
